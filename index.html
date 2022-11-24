@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>피자헛</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
+    <link href="./css/reset.css" rel="stylesheet" type="text/css">
+    <link href="./css/base.css" rel="stylesheet" type="text/css">
+    <link href="./css/flexslider.css" rel="stylesheet" type="text/css">
+    <link href="./css/m_main.css" rel="stylesheet" type="text/css">
+    <link href="./css/pc_main.css" rel="stylesheet" type="text/css">
+    <link href="./css/t_main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <script src="./script/prefixfree.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="./script/jquery.flexslider.js"></script>
+    <script src="./script/script.js" defer></script>
+</head>
+<body>
+    <input type="checkbox" id="toggle">
+    <header> 
+        <div class="header_web">
+            <h1><a href="index.html" title="메인 페이지 바로가기"><img src="./img/logo1.png" alt="상단로고"></a></h1> 
+            <label for="toggle" class="toggle_bar"><i class='fas fa-bars'></i></label>
+            <label for="toggle" class="toggle_bar toggle_bar2"><i class='fas fa-bars' id="bar" onclick="bars();"></i></label>
+            <p><a href="#" title="유저"><i class='fas fa-user-alt'></i></a></p>
+            <p><a href="#" title="쇼핑"><i class="fa fa-shopping-basket"></i></a></p>
+            <div class="gub_web">
+                <label for="toggle"><i class='fas fa-window-close'></i></label>
+                <nav class="gub">
+                    <ul>
+                        <li>
+                            <img src="./img/logo1.png" alt="로고">
+                        </li>
+                        <li>
+                            <label for="gu1">메뉴 <i class="fas fa-angle-down"></i></label>
+                            <input type="checkbox" id="gu1">
+                            <ul class="snb">   
+                                <li><a href="#" title="피자">피자</a></li>
+                                <li><a href="#" title="마이박스(1인 메뉴)">마이박스<br>(1인 메뉴)</a></li>
+                                <li><a href="#" title="세트">세트</a></li>
+                                <li><a href="#" title="파스타">파스타&#38;치킨</a></li>
+                                <li><a href="#" title="사이드">사이드&#38;음료</a></li>
+                            </ul>
+                        </li> 
+                        <li>
+                            <a href="#" title="E쿠폰 주문 바로가기">E쿠폰 주문</a>
+                        </li>
+                        <li>
+                            <label for="gu2">이벤트&#38;제휴 <i class="fas fa-angle-down"></i></label>
+                            <input type="checkbox" id="gu2">
+                            <ul class="snb">
+                                <li><a href="#" title="이벤트">이벤트</a></li>
+                                <li><a href="#" title="제휴할인">제휴할인</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label for="gu3">단체주문 <i class="fas fa-angle-down"></i></label>
+                            <input type="checkbox" id="gu3">
+                            <ul class="snb">
+                                <li><a href="#" title="단체배달">단체배달</a></li>
+                                <li><a href="#" title="모바일 상품권">모바일 상품권<br>(단체/기업)</a></li>
+                                <li><a href="#" title="지류 상품권">지류 상품권</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label for="gu4">창업안내 <i class="fas fa-angle-down"></i></label>
+                            <input type="checkbox" id="gu4">
+                            <ul class="snb">
+                                <li><a href="#" title="창업문의">창업문의</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="lub">
+                <ul>
+                    <li>메뉴
+                        <ul class="sub">
+                            <li><a href="#" title="피자">피자</a></li>
+                            <li><a href="#" title="마이박스(1인 메뉴)">마이박스(1인 메뉴)</a></li>
+                            <li><a href="#" title="세트">세트</a></li>
+                            <li><a href="#" title="파스타">파스타&#38;치킨</a></li>
+                            <li><a href="#" title="사이드">사이드&#38;음료</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="E쿠폰 주문 바로가기">E쿠폰 주문</a>
+                    </li>
+                    <li>
+                        <a href="#" title="모바일 상품권">모바일 상품권</a>
+                    </li>
+                    <li>
+                        <a href="#" title="매장찾기">매장찾기</a>
+                    </li>
+                    <li>
+                        About 피자헛
+                        <ul class="sub">
+                            <li><a href="#" title="브랜드">브랜드</a></li>
+                            <li><a href="#" title="인재채용">인재채용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="피자헛 멤버십">피자헛 멤버십</a>
+                    </li>
+                    <li>
+                        <a href="#" title="매장찾기">로그인&#38;회원가입</a>
+                    </li>
+                    <li>
+                        이벤트&#38;제휴
+                        <ul class="sub">
+                            <li><a href="#" title="이벤트">이벤트</a></li>
+                            <li><a href="#" title="제휴할인">제휴할인</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        단체주문
+                        <ul class="sub">
+                            <li><a href="#" title="단체배달">단체배달</a></li>
+                            <li><a href="#" title="모바일 상품권">모바일 상품권(단체/기업)</a></li>
+                            <li><a href="#" title="지류 상품권">지류 상품권</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        창업안내
+                        <ul class="sub">
+                            <li><a href="#" title="창업문의">성공창업관</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        피자헛의 소식
+                        <ul class="sub" >
+                            <li><a href="#" title="보도자료">보도자료</a></li>
+                            <li><a href="#" title="공지사항">공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        고객센터
+                        <ul class="sub">
+                            <li><a href="#" title="자주묻는질문">자주묻는질문</a></li>
+                            <li><a href="#" title="고객의말씀(1:1문의)">고객의말씀(1:1문의)</a></li>
+                        </ul>
+                    </li> 
+                </ul>
+                <a href="#" title="브랜드 역사"><img src="./img/brand.png" alt="브랜드 이미지"></a>
+            </nav>
+        </div>
+    </header> 
+    <input type="checkbox" id="window">
+    <main>                
+        <article class="slide">
+            <h2>비주얼 슬라이드</h2>
+            <!-- Place somewhere in the <body> of your page -->
+            <div class="flexslider pcslide">
+                <ul class="slides">
+                <li>
+                    <a href="#" title="메인슬라이드"><img src="./img/pcslide1.png" alt="슬라이드"></a>
+                </li>
+                <li>
+                    <a href="#" title="메인슬라이드"><img src="./img/pcslide2.png" alt="슬라이드"></a>
+                </li>
+                <li>
+                    <a href="#" title="메인슬라이드"><img src="./img/pcslide3.png" alt="슬라이드"></a>
+                </li>
+                <li>
+                    <a href="#" title="메인슬라이드"><img src="./img/pcslide4.png" alt="슬라이드"></a>
+                </li>
+                <li>
+                    <a href="#" title="메인슬라이드"><img src="./img/pcslide5.png" alt="슬라이드"></a>
+                </li>
+                <li>
+                    <a href="#" title="메인슬라이드"><img src="./img/pcslide6.png" alt="슬라이드"></a>
+                </li>
+                </ul>
+            </div>
+            <!-- Place somewhere in the <body> of your page -->
+            <div class="flexslider mslide">
+                <ul class="slides ">
+                <li>
+                    <a href="#" title="메인슬라이드"><img src="./img/slide1.png" alt="슬라이드 이미지1"></a>
+                </li>
+                <li>
+                    <a href="#" title="메인슬라이드"><img src="./img/slide2.png" alt="슬라이드 이미지2"></a>
+                </li>
+                <li>
+                    <a href="#" title="메인슬라이드"><img src="./img/slide3.png" alt="슬라이드 이미지3"></a>
+                <li>
+                    <a href="#" title="메인슬라이드"><img src="./img/slide4.png" alt="슬라이드 이미지4"></a>   
+                </li>
+                <li>
+                    <a href="#" title="메인슬라이드"><img src="./img/slide5.png" alt="슬라이드 이미지5"></a>
+                </li>
+                <li>
+                    <a href="#" title="메인슬라이드"><img src="./img/slide6.png" alt="슬라이드 이미지6"></a>
+                </li>
+                </ul>
+            </div>
+        </article> 
+        <section class="con">
+            <h2>콘텐츠 영역</h2>
+            <article class="yo">
+                <h2>영상</h2>
+                <iframe src="https://www.youtube.com/embed/yxm2YN8L1IQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p class="logtext">로그인하고<br>
+                        더 많은 혜택을 즐겨보세요!</p>
+                    <a href="#" title="로그인 바로가기" class="logtext">로그인</a>
+                    <a href="#" title="회원가입 바로가기" class="logtext">회원가입</a>
+            </article>
+            <article class="c_lub">
+                <h2>메뉴</h2>
+                <div class="tab_menu">
+                    <h2><span class="co1">피자 헛</span>을 대표하는 메뉴</h2>
+                    <ul class="list">
+                        <li class="on">
+                            <a href="#tab1" class="btn">피자</a>
+                            <div id="tab1" class="cont">
+                                <ul class="c1">
+                                    <li>
+                                        <a href="#" title="">
+                                        <span>New</span>
+                                        <img src="./img/pizza1.png" alt="피자메뉴"><br>
+                                        <p>레몬크림쉬림프<br>
+                                            <span class="price">M29,900 ~<br>
+                                            L35,900~</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                        <span class="best">Best</span>
+                                        <img src="./img/pizza2.png" alt="피자메뉴"><br>
+                                        <p>돈마호크<br>
+                                            <span class="price">M29,900 ~<br>
+                                            L35,900~</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                        <span class="best">Best</span>
+                                        <img src="./img/pizza3.png" alt="피자메뉴"><br>
+                                        <p>케이준 더블쉬림<br>
+                                            <span class="price">M29,900 ~<br>
+                                            L35,900~</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                        <span>New</span>
+                                        <img src="./img/pizza4.png" alt="피자메뉴"><br>
+                                        <p>알로하 하와이<br>
+                                            <span class="price">M20,500 ~<br>
+                                            L26,500 ~</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                        <span>Best</span>
+                                        <img src="./img/pizza5.png" alt="피자메뉴"><br>
+                                        <p>허니버터옥수수<br>
+                                            <span class="price">M20,500 ~<br>
+                                            L26,500 ~</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <span>Best</span>
+                                            <img src="./img/pizza6.png" alt="피자메뉴"><br>
+                                            <p>웨지포테이토<br>
+                                                <span class="price">M20,500 ~<br>
+                                                L26,500 ~</span></p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="swiper menuSwiper">
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                        <span>New</span>
+                                        <img src="./img/pizza1.png" alt="피자메뉴"><br>
+                                        <p>레몬크림쉬림프<br>
+                                            <span class="price">M29,900 ~<br>
+                                            L35,900~</span></p>
+                                        </a>
+                                    </div>
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                            <span class="best">Best</span>
+                                            <img src="./img/pizza2.png" alt="피자메뉴"><br>
+                                            <p>돈마호크<br>
+                                                <span class="price">M29,900 ~<br>
+                                                L35,900~</span></p>
+                                        </a>
+                                    </div>
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                            <span class="best">Best</span>
+                                            <img src="./img/pizza3.png" alt="피자메뉴"><br>
+                                            <p>케이준 더블쉬림<br>
+                                                <span class="price">M29,900 ~<br>
+                                                L35,900~</span></p>
+                                            </a>
+                                    </div>
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                            <span>New</span>
+                                            <img src="./img/pizza4.png" alt="피자메뉴"><br>
+                                            <p>알로하 하와이<br>
+                                                <span class="price">M20,500 ~<br>
+                                                L26,500 ~</span></p>
+                                            </a>
+                                    </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#tab2" class="btn">세트</a>
+                            <div id="tab2" class="cont">
+                                <ul class="c2">
+                                    <li>
+                                        <a href="#" title="">
+                                            <img src="./img/set.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <img src="./img/set2.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <img src="./img/set3.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <img src="./img/set4.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <img src="./img/set5.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <img src="./img/set6.png" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="swiper menuSwiper">
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                            <img src="./img/set.png" alt="">
+                                        </a>
+                                    </div>
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                            <img src="./img/set2.png" alt="">
+                                        </a>
+                                    </div>
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                            <img src="./img/set3.png" alt="">
+                                        </a>
+                                    </div>
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                            <img src="./img/set4.png" alt="">
+                                        </a>
+                                    </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#tab3" class="btn">파스타<span class="No">&</span>치킨</a>
+                            <div id="tab3" class="cont">
+                                <ul class="c3">
+                                    <li>
+                                        <a href="#" title="">
+                                            <img src="./img/chicken1.png" alt="">
+                                            <p>하와이안 갈릭치킨 4조각<br/> 
+                                                <span class="price">5,800원</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <img src="./img/chicken2.png" alt="">
+                                            <p>소이갈릭 윙 8조각<br/>
+                                                <span class="price">7,900원</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <img src="./img/chicken3.png" alt="">
+                                            <p>소이갈릭 윙 4조각<br/>
+                                                <span class="price">4,200원</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <span>30%</span>
+                                            <img src="./img/pasta1.png" alt="">
+                                            <p>서프라이즈콤보세트<br/>
+                                                <span class="price">8,900원 <del>12,700원</del></span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <span>New</span>
+                                            <img src="./img/pasta2.png" alt="">
+                                            <p>돈마호그 로제파스타<br>
+                                                <span class="price">9,800원</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <img src="./img/pasta3.png" alt="">
+                                            <p>크림 치킨 파스타 <br>
+                                                <span class="price">9,800원</span></p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="swiper menuSwiper">
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                            <span>New</span>
+                                            <img src="./img/pasta2.png" alt="">
+                                            <p>돈마호그 로제파스타<br>
+                                                <span class="price">9,800원</span></p>
+                                        </a>
+                                    </div>
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                            <img src="./img/chicken2.png" alt="">
+                                            <p>소이갈릭 윙 8조각<br/>
+                                                <span class="price">7,900원</span></p>
+                                        </a>
+                                    </div>
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                            <span>30%</span>
+                                            <img src="./img/pasta1.png" alt="">
+                                            <p>서프라이즈콤보세트<br/>
+                                                <span class="price">8,900원 <del>12,700원</del></span></p>
+                                        </a>
+                                    </div>
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                            <img src="./img/pasta3.png" alt="">
+                                            <p>크림 치킨 파스타 <br>
+                                                <span class="price">9,800원</span></p>
+                                        </a>
+                                    </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#tab4" class="btn">사이드<span class="No">&</span>음료</a>
+                            <div id="tab4" class="cont">
+                                <ul class="c4">
+                                    <li>
+                                        <a href="#" title="">
+                                            <span class="best">Best</span>
+                                            <img src="./img/side1.png" alt="">
+                                            <p>스위트 갈릭 핑거스<br>
+                                                <span class="price">7,900원</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <span class="best">Best</span>
+                                            <img src="./img/side2.png" alt="">
+                                            <p>스위트 콘 핑거스<br>
+                                                <span class="price">7,900원</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <img src="./img/side3.png" alt="">
+                                            <p>대만 여유 치즈볼<br>
+                                                <span class="price">5,800원</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <img src="./img/side4.png" alt="">
+                                            <p>콘샐러드<br>
+                                                <span class="price">1,200원</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <img src="./img/side5.png" alt="">
+                                            <p>펩시 1.25L<br>
+                                                <span class="price">2,000원</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <img src="./img/side6.png" alt="">
+                                            <p>사이다 1.25L<br>
+                                                <span class="price">2,000원</span></p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="swiper menuSwiper">
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                            <span class="best">Best</span>
+                                            <img src="./img/side1.png" alt="">
+                                            <p>스위트 갈릭 핑거스<br>
+                                                <span class="price">7,900원</span></p>
+                                        </a>
+                                    </div>
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                            <span class="best">Best</span>
+                                            <img src="./img/side2.png" alt="">
+                                            <p>스위트 콘 핑거스<br>
+                                                <span class="price">7,900원</span></p>
+                                        </a>
+                                    </div>
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                            <img src="./img/side5.png" alt="">
+                                            <p>펩시 1.25L<br>
+                                                <span class="price">2,000원</span></p>
+                                        </a>
+                                    </div>
+                                      <div class="swiper-slide">
+                                        <a href="#" title="">
+                                            <img src="./img/side6.png" alt="">
+                                            <p>사이다 1.25L<br>
+                                                <span class="price">2,000원</span></p>
+                                        </a>
+                                    </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" title="전체메뉴보기" class="a1"><span>전체메뉴 보기</span></a>
+                </div>
+            </article>
+            <article class="c_sub">
+                <h2>내비</h2>
+                <div class="vd">
+                    <div class="v1">
+                        <a href="#" title="배달">
+                            <img src="./img/ic_delivery.png" alt="배달">
+                            <p>배달</p>
+                        </a>
+                    </div>
+                    <div class="v1_2">
+                        <label for="window">
+                            <img src="./img/ic_delivery.png" alt="배달">
+                            <p>배달</p>
+                        </label>
+                    </div>
+                    <div class="vd1">
+                        <div class="v3">
+                            <a href="#" title="포장">
+                                <img src="./img/ic_packaging.png" alt="포장">
+                                <p>포장</p>
+                            </a>
+                        </div>
+                        <div class="v3_2">
+                            <label for="window">
+                                <img src="./img/ic_packaging.png" alt="포장">
+                                <p>포장</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="v2"> 
+                        <a href="#" title="마이오더">
+                            <i class='far fa-address-book'></i>
+                            <p>마이오더</p>
+                            <p class="v2_txt">나만의 피자헛메뉴를<br>
+                                마이오더로<br>
+                               등록하고 간편하고 <br>
+                                빠르게 주문하세요
+                            </p>
+                        </a>
+                    </div>
+                    <div class="v4">
+                        <a href="#" title="창업">
+                            <i class='fas fa-home'></i>
+                            <p>창업</p>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article id="data">
+                <h2>안녕</h2>
+                <div class="window_menu">
+                    <p>배달주소/포장매장 설정</p>
+                    <label for="window"><i class='fas fa-times'></i></label>
+                    <ul class="list">
+                        <li class="on">
+                            <a href="#tab1_1" class="btn">배달</a>
+                            <div id="tab1_1" class="cont">
+                                <input type="text" placeholder="건물명, 도로명 또는 지번으로 검색"></div>
+                        </li>
+                        <li>
+                            <a href="#tab2_1" class="btn">포장</a>
+                            <div id="tab2_1" class="cont">
+                                <input type="text" placeholder="지역/매장명을 입력해주세요">
+                                <a href="#" title="근처">
+                                    <img src="./img/ic_location1.png" alt="위치">
+                                    <p>현재 위치로 근처 매장 찾기</p>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="ev">
+                <h2>이벤트</h2>
+                <ul class="evimg">
+                    <li><a href="#" title="이벤트"><img src="./img/mevent1.png" alt="이벤트이미지1"></a></li>
+                    <li><a href="#" title="이벤트"><img src="./img/mevent2.png" alt="이벤트이미지2"></a> </li>
+                    <li><a href="#" title="이벤트"><img src="./img/mevent3.png" alt="이벤트이미지3"></a> </li>
+                    <li><a href="#" title="이벤트"><img src="./img/mevent4.png" alt="이벤트이미지4"></a> </li>
+                </ul>
+                <div class="ev1">
+                    <div class="swiper evSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="ev_txt">
+                                <p>모바일상품권 선물하기<br> <span>피자로 마음을<br> 선물하세요</span></p>
+                                <a href="javascript:void(0)" title="이벤트" class="ev_btn">자세히 보기<i class='fas fa-arrow-alt-circle-right'></i></a>
+                                </div>
+                                <a href="javascript:void(0)" title="이벤트"><img src="./img/event1.png" alt="이벤트이미지1"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ev_txt">
+                                <p>회원가입 혜택 알아보기<br> <span>회원 가입 즉시 100%<br> 쿠폰 지급</span></p>
+                                <a href="javascript:void(0)" title="이벤트" class="ev_btn">자세히 보기<i class='fas fa-arrow-alt-circle-right'></i></a>
+                                </div>
+                                <a href="javascript:void(0)" title="이벤트"><img src="./img/event2.png" alt="이벤트이미지2"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ev_txt">
+                                <p>피자헛 제휴할인 모아보기<br> <span>통신사, 카드사 할인 및<br>적립 안내</span></p>
+                                <a href="javascript:void(0)" title="이벤트" class="ev_btn">자세히 보기<i class='fas fa-arrow-alt-circle-right'></i></a>
+                                </div>
+                                <a href="javascript:void(0)" title="이벤트"><img src="./img/event3.png" alt="이벤트이미지3"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ev_txt">
+                                <p>피자헛 창업안내&문의<br> <span>피자헛 가맹점주님을<br>모십니다.</span></p>
+                                <a href="javascript:void(0)" title="이벤트" class="ev_btn">자세히 보기<i class='fas fa-arrow-alt-circle-right'></i></a>
+                                </div>
+                                <a href="javascript:void(0)" title="이벤트"><img src="./img/event4.png" alt="이벤트이미지4"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="notice">
+                <h2>제목</h2>
+                <p>공지사항</p>
+                <ul>
+                    <li>
+                        <a href="#" title="공지사항">2022.08.08 기상악하로 인한 매장 운영 특이사항 안내</a><br><span>2022-08-09</span>
+                    </li>
+                    <li>
+                        <a href="#" title="공지사항">프림미엄 Summer 세트 '레고랜드 숙박권 + 입장권' 당첨자 안내</a><br><span>2022-08-01</span>
+                    </li>
+                    <li>
+                        <a href="#" title="공지사항">&#60;가정의달 경품 대잔치&#62; 응모 프로모션 당첨자 발표</a><br><span>2022-06-09</span>
+                    </li>
+                    <li>
+                        <a href="#" title="공지사항">피자헛 가격 조정 안내</a><br><span>2022-05-26</span>
+                    </li>
+                </ul>
+            </article>
+            <article class="da">
+                <h2>창업, 브랜드</h2>
+                <img src="./img/bg_vegetable3.jpg" alt="창업이미지">
+                <a href="#" title="창업문의">
+                    <h2>창업문의</h2>
+                    <p>가장 사랑받고 빠르게<br>
+                        성장하는 피자헛과 함께<br>
+                        성공을 열어드립니다.
+                    </p>  
+                    <span>자세히 보기</span>
+                </a>
+            </article>
+            <article class="coupon">
+                <div>
+                    <p>E쿠폰으로<br>
+                        피자를 주문하세요.</p>
+                    <input type="text" maxlength="16" placeholder="12~16자리 번호를 입력하세요.[하이푼(-)제외]">
+                </div>
+            </article>
+            <article class="sign">
+                <div>
+                    <label for="or">
+                        <i class='far fa-address-book'></i>
+                        <h4>마이오더</h4>
+                        <p>- 나만의 피자헛메뉴를 마이오더로<br>
+                            등록하고 간편하고 빠르게 주문하세요!</p>
+                    </label>
+                </div>
+                <div>
+                    <a href="#" title="매장정보">
+                        <i class='fas fa-house-damage'></i>
+                        <h4>매장정보</h4>
+                        <p>가까운 매장을 찾아 보아요.</p>
+                    </a>
+                </div>
+            </article>
+            <input type="checkbox" id="or">
+            <article class="order">
+                <h2>마이오더</h2>
+                <div>
+                    <label for="or"><i class="fa fa-close"></i></label>
+                    <div class="to"><h3>마이오더</h3></div>
+                    <div class="ce">
+                        <label for="my">마이오더 사용방법 보기<i class='fas fa-angle-double-down'></i></label>
+                        <input type="checkbox" id="my">
+                        <iframe src="explanation.html" class="explanation"></iframe>
+                    </div>
+                    <div class="ce2"></div>
+                    <div class="bo"><a href="#" title="마이오더">마이오더 등록하기</a></div>
+                </div>
+            </article>
+            <article class="ba">
+                <a href="#" title="브랜드 소개">
+                    <img src="./img/brand.png" alt="브랜드 이미지" class="baimg">
+                </a>
+                <p>브랜드 소개</p>
+            </article> 
+
+        </section>
+    </main>
+    <footer>
+        <div class="fo">
+            <nav>
+                <ul class="fo_nav">
+                    <li><a href="#" title="이용약관">이용약관</a></li>
+                    <li><a href="#" title="개인정보취급방침">개인정보취급방침</a></li>
+                    <li><a href="#" title="공지사항">공지사항</a></li>
+                    <li><a href="#" title="창업안내">창업안내</a></li>
+                    <li><a href="#" title="대표번호">대표번호 0000-0000(운영시간 11:00~22:30)</a></li>
+                </ul>
+            </nav> 
+            <address>
+                <p>서울시 000구 000로 00길 0,0~0층</p>
+                <p>사업자등록번호 000-00-00000</p>
+                <p>통신판매업신고 번호 제 2018호-서울영등포-1220호</p>
+                <p>한국피자헛유한회사 대표이사:000</p>
+                <p>개인정보 보호책임자: 000</p>
+                <p>CopyrigntⓒBY PIZZA HUT KOREA LTD. ALL RIGHT RESERVED</p>
+            </address>
+            <div class="kbpi">
+                <img src="./img/ic_kbpi.png" alt="마크">
+                <p>한국능률협회 컨설팅21년 연속(2001~2021)선정</p>
+                <p>한국 산업의 브랜드 파워 피자전문점 부문 1워 피자헛</p>
+            </div>
+            <a href="#" title="페이스북"><i class='fab fa-facebook-f'></i></a>
+            <a href="#" title="인스타그램"><i class='fab fa-instagram'></i></a><br>
+            <img src="./img/logo2.png" alt="하단 로고" class="b_lo">
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Can also be used with $(document).ready()
+
+        var swiper = new Swiper(".evSwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+        loop:true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+      });
+      var mswiper = new Swiper(".menuSwiper", {
+        slidesPerView: 3.3,
+        spaceBetween: 30,
+        freeMode: true,
+      });
+    $(window).load(function() {
+        $('.flexslider').flexslider({
+            animation: "slide"
+        });
+        });
+    </script>
+</body>
+</html>
